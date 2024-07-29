@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+
+    <TextView
+        android:id="@+id/titleResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="DOG"
+        android:textColor="#ffc299"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+     <ImageButton
+         android:id="@+id/Resultbackbtn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="11dp"
+         android:layout_marginLeft="25dp"
+         android:background="@drawable/iconback"
+         android:elevation="2dp"
+         android:fontFamily="sans-serif-condensed-light"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintHorizontal_bias="0.148"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/toolbar"
+         app:layout_constraintVertical_bias="0.033"
+         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+     <androidx.appcompat.widget.Toolbar
+         android:id="@+id/toolbar"
+         android:elevation="1dp"
+         android:layout_width="match_parent"
+         android:layout_height="80dp"
+         android:background="@color/orange"
+         app:layout_collapseMode="pin"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0.0" />
+
+
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         tools:ignore="MissingConstraints">
+
+         <androidx.coordinatorlayout.widget.CoordinatorLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical" >
+
+             <View
+                 android:id="@+id/view"
+                 android:layout_width="wrap_content"
+                 android:layout_height="210dp"
+                 android:layout_marginTop="30dp"
+                 android:background="@drawable/bg_view"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="1.0"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintVertical_bias="0.0" />
+
+             <ImageView
+                 android:id="@+id/ResultimageView"
+                 android:layout_width="210dp"
+                 android:layout_height="210dp"
+                 android:elevation="3dp"
+                 android:padding="10dp"
+                 android:transitionName="resultimageview"
+                 android:background="@drawable/cardview"
+                 app:civ_border_color="@color/white"
+                 app:civ_border_width="8dp"
+                 app:layout_anchor="@+id/view"
+                 app:layout_anchorGravity="bottom|center" />
+
+
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_gravity="center"
+                 android:background="@drawable/bg_view2"
+                 android:layout_marginTop="370dp"
+                 >
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/Resultclassified"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="top|center"
+                         android:layout_marginTop="20dp"
+                         android:text="Example"
+                         android:textAlignment="center"
+                         android:textColor="@color/Giants_Orange"
+                         android:textSize="20sp"
+                         android:textStyle="bold" />
+
+                     <androidx.recyclerview.widget.RecyclerView
+                         android:id="@+id/recyclerView"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/Resultclassified"
+                         android:layout_marginTop="13dp"
+                         android:paddingStart="7dp"
+                         android:paddingEnd="7dp"
+                         android:paddingBottom="5dp"/>
+
+                     <androidx.coordinatorlayout.widget.CoordinatorLayout
+                         android:id="@+id/cardview"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginEnd="16dp"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginTop="9dp"
+                         android:background="@drawable/cardview"
+                         android:layout_below="@+id/recyclerView1">
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="vertical">
+
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                              <TextView
+                                  android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="1"
+                                  android:text="Traits"
+                                  android:textSize="15sp"
+                                  android:textStyle="bold"
+                                  android:textColor="#7D1A00"
+                                  android:padding="20dp"/>
+
+                              <ImageButton
+                                  android:id="@+id/arrow_Up"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_gravity="center"
+                                  android:visibility="gone"
+                                  android:src="@drawable/arrow_up"
+                                  android:layout_marginEnd="15dp"
+                                  android:background="#FFFFFF"
+                                  />
+                              <ImageButton
+                                  android:id="@+id/arrow_Down"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_gravity="center"
+                                  android:visibility="visible"
+                                  android:src="@drawable/arrow_down"
+                                  android:layout_marginEnd="15dp"
+                                  android:background="#FFFFFF"
+                                  />
+
+                          </LinearLayout>
+
+
+                             <androidx.coordinatorlayout.widget.CoordinatorLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 >
+
+                                     <LinearLayout
+                                         android:id="@+id/linear_expand"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         android:visibility="gone"
+                                         android:orientation="vertical">
+
+                                         <TextView
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:text="Behavior"
+                                             android:textSize="15sp"
+                                             android:textColor="@color/black"
+                                             android:paddingStart="20dp"
+                                             android:layout_margin="10dp"
+                                             />
+
+                                         <LinearLayout
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="horizontal">
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Soft"
+                                                 android:textSize="12sp"
+                                                 android:layout_marginStart="20dp"
+                                                 android:textColor="@color/darkgray"
+
+                                                 />
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Aggressive"
+                                                 android:textSize="12sp"
+                                                 android:textAlignment="textEnd"
+                                                 android:layout_marginEnd="20dp"
+                                                 android:textColor="@color/darkgray"
+                                                 />
+                                         </LinearLayout>
+
+                                         <RatingBar
+                                             android:id="@+id/ratingbar1"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="36dp"
+                                             android:layout_gravity="center"
+                                             android:layout_marginStart="15dp"
+                                             android:layout_marginEnd="15dp"
+                                             android:layout_marginTop="8dp"
+                                             android:layout_marginBottom="10dp"
+                                             android:isIndicator="true"
+                                             android:numStars="5"
+                                             android:progressDrawable="@drawable/custome_ratingbar"
+                                             android:rating="2" />
+
+                                         <TextView
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:text="Barking"
+                                             android:textSize="15sp"
+                                             android:textColor="@color/black"
+                                             android:paddingStart="20dp"
+                                             android:layout_margin="10dp"
+                                             />
+
+                                         <LinearLayout
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="horizontal">
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Only To Alert"
+                                                 android:textSize="12sp"
+                                                 android:layout_marginStart="20dp"
+                                                 android:textColor="@color/darkgray"
+
+                                                 />
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Very Vocal"
+                                                 android:textSize="12sp"
+                                                 android:textAlignment="textEnd"
+                                                 android:layout_marginEnd="20dp"
+                                                 android:textColor="@color/darkgray"
+                                                 />
+                                         </LinearLayout>
+
+                                         <RatingBar
+                                             android:id="@+id/ratingbar2"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="36dp"
+                                             android:layout_gravity="center"
+                                             android:layout_marginStart="15dp"
+                                             android:layout_marginEnd="15dp"
+                                             android:layout_marginTop="8dp"
+                                             android:layout_marginBottom="15dp"
+                                             android:isIndicator="true"
+                                             android:numStars="5"
+                                             android:progressDrawable="@drawable/custome_ratingbar"
+                                             android:rating="2"/>
+
+                                         <TextView
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:text="Energy Level"
+                                             android:textSize="15sp"
+                                             android:textColor="@color/black"
+                                             android:paddingStart="20dp"
+                                             android:layout_margin="10dp"
+                                             />
+
+                                         <LinearLayout
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="horizontal">
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Couch Potato"
+                                                 android:textSize="12sp"
+                                                 android:layout_marginStart="20dp"
+                                                 android:textColor="@color/darkgray"
+
+                                                 />
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="High Energy"
+                                                 android:textSize="12sp"
+                                                 android:textAlignment="textEnd"
+                                                 android:layout_marginEnd="20dp"
+                                                 android:textColor="@color/darkgray"
+                                                 />
+                                         </LinearLayout>
+
+                                         <RatingBar
+                                             android:id="@+id/ratingbar3"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="36dp"
+                                             android:layout_gravity="center"
+                                             android:layout_marginStart="15dp"
+                                             android:layout_marginEnd="15dp"
+                                             android:layout_marginTop="8dp"
+                                             android:layout_marginBottom="15dp"
+                                             android:isIndicator="true"
+                                             android:numStars="5"
+                                             android:progressDrawable="@drawable/custome_ratingbar"
+                                             android:rating="2"/>
+
+                                         <TextView
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:text="Trainability "
+                                             android:textSize="15sp"
+                                             android:textColor="@color/black"
+                                             android:paddingStart="20dp"
+                                             android:layout_margin="10dp"
+                                             />
+
+                                         <LinearLayout
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="horizontal">
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Self-Willed"
+                                                 android:textSize="12sp"
+                                                 android:layout_marginStart="20dp"
+                                                 android:textColor="@color/darkgray"
+
+                                                 />
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Eager to Please"
+                                                 android:textSize="12sp"
+                                                 android:textAlignment="textEnd"
+                                                 android:layout_marginEnd="20dp"
+                                                 android:textColor="@color/darkgray"
+                                                 />
+                                         </LinearLayout>
+
+                                         <RatingBar
+                                             android:id="@+id/ratingbar4"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="36dp"
+                                             android:layout_gravity="center"
+                                             android:layout_marginStart="15dp"
+                                             android:layout_marginEnd="15dp"
+                                             android:layout_marginTop="8dp"
+                                             android:layout_marginBottom="15dp"
+                                             android:isIndicator="true"
+                                             android:numStars="5"
+                                             android:progressDrawable="@drawable/custome_ratingbar"
+                                             android:rating="2"/>
+
+                                         <TextView
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:text="Good with other dogs "
+                                             android:textSize="15sp"
+                                             android:textColor="@color/black"
+                                             android:paddingStart="20dp"
+                                             android:layout_margin="10dp"
+                                             />
+
+                                         <LinearLayout
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="horizontal">
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Not Recommended"
+                                                 android:textSize="12sp"
+                                                 android:layout_marginStart="20dp"
+                                                 android:textColor="@color/darkgray"
+
+                                                 />
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Good With Other Dogs"
+                                                 android:textSize="12sp"
+                                                 android:textAlignment="textEnd"
+                                                 android:layout_marginEnd="20dp"
+                                                 android:textColor="@color/darkgray"
+                                                 />
+                                         </LinearLayout>
+
+                                         <RatingBar
+                                             android:id="@+id/ratingbar5"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="36dp"
+                                             android:layout_gravity="center"
+                                             android:layout_marginStart="15dp"
+                                             android:layout_marginEnd="15dp"
+                                             android:layout_marginTop="8dp"
+                                             android:layout_marginBottom="15dp"
+                                             android:isIndicator="true"
+                                             android:numStars="5"
+                                             android:progressDrawable="@drawable/custome_ratingbar"
+                                             android:rating="2"/>
+
+                                         <TextView
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:text="Shedding "
+                                             android:textSize="15sp"
+                                             android:textColor="@color/black"
+                                             android:paddingStart="20dp"
+                                             android:layout_margin="10dp"
+                                             />
+
+                                         <LinearLayout
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="horizontal">
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="No Shedding"
+                                                 android:textSize="12sp"
+                                                 android:layout_marginStart="20dp"
+                                                 android:textColor="@color/darkgray"
+
+                                                 />
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Hair Everywhere"
+                                                 android:textSize="12sp"
+                                                 android:textAlignment="textEnd"
+                                                 android:layout_marginEnd="20dp"
+                                                 android:textColor="@color/darkgray"
+                                                 />
+                                         </LinearLayout>
+
+                                         <RatingBar
+                                             android:id="@+id/ratingbar6"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="36dp"
+                                             android:layout_gravity="center"
+                                             android:layout_marginStart="15dp"
+                                             android:layout_marginEnd="15dp"
+                                             android:layout_marginTop="8dp"
+                                             android:layout_marginBottom="15dp"
+                                             android:isIndicator="true"
+                                             android:numStars="5"
+                                             android:progressDrawable="@drawable/custome_ratingbar"
+                                             android:rating="2"/>
+
+                                         <TextView
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content"
+                                             android:text="Weather"
+                                             android:textSize="15sp"
+                                             android:textColor="@color/black"
+                                             android:paddingStart="20dp"
+                                             android:layout_margin="10dp"
+                                             />
+
+                                         <LinearLayout
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="horizontal">
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Warm"
+                                                 android:textSize="12sp"
+                                                 android:layout_marginStart="20dp"
+                                                 android:textColor="@color/darkgray"
+
+                                                 />
+                                             <TextView
+                                                 android:layout_width="0dp"
+                                                 android:layout_height="wrap_content"
+                                                 android:layout_weight="1"
+                                                 android:text="Cold"
+                                                 android:textSize="12sp"
+                                                 android:textAlignment="textEnd"
+                                                 android:layout_marginEnd="20dp"
+                                                 android:textColor="@color/darkgray"
+                                                 />
+                                         </LinearLayout>
+
+                                         <RatingBar
+                                             android:id="@+id/ratingbar7"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="36dp"
+                                             android:layout_gravity="center"
+                                             android:layout_marginStart="15dp"
+                                             android:layout_marginEnd="15dp"
+                                             android:layout_marginTop="8dp"
+                                             android:layout_marginBottom="15dp"
+                                             android:isIndicator="true"
+                                             android:numStars="5"
+                                             android:progressDrawable="@drawable/custome_ratingbar"
+                                             android:rating="2"/>
+                                     </LinearLayout>
+                             </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                         </LinearLayout>
+                     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+                     <androidx.coordinatorlayout.widget.CoordinatorLayout
+                         android:id="@+id/cardview3"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginEnd="16dp"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginTop="16dp"
+                         android:layout_marginBottom="15dp"
+                         android:background="@drawable/cardview"
+                         android:layout_above="@+id/Resultviewpager2">
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="vertical">
+
+                             <TextView
+                                 android:id="@+id/photo"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginTop="15dp"
+                                 android:padding="10dp"
+                                 android:layout_marginStart="10dp"
+                                 android:text="Photos"
+                                 android:textSize="15sp"
+                                 android:textStyle="bold"
+                                 android:textColor="#7D1A00" />
+
+                             <androidx.viewpager2.widget.ViewPager2
+                                 android:id="@+id/Resultviewpager2"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:layout_alignParentBottom="true"
+                                 android:paddingStart="40dp"
+                                 android:paddingTop="10dp"
+                                 android:paddingEnd="40dp"
+                                 android:paddingBottom="10dp"
+                                 android:layout_marginStart="20dp"
+                                 android:layout_marginEnd="20dp"
+                                 android:layout_marginBottom="8dp"
+                                 tools:ignore="SpeakableTextPresentCheck" />
+
+                         </LinearLayout>
+                     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                 </LinearLayout>
+             </RelativeLayout>
+         </androidx.coordinatorlayout.widget.CoordinatorLayout>
+     </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

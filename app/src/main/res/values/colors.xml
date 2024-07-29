@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="start_color">#EC9F05</color>
+    <color name="end_color">#FF4E00</color>
+    <color name="Giants_Orange">#FE5A1D</color>
+    <color name="green">#A4DE02</color>
+    <color name="BrightOrange">#FFA500</color>
+    <color name="ligth_orange">#FCE7CC</color>
+    <color name="orange">#E88504</color>
+    <color name="kulaylupa">#00000000</color>
+    <color name="lightgray">#ececec</color>
+    <color name="darkgray">#a9a9a9</color>
+
+</resources>

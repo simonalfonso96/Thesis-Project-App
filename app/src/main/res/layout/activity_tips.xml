@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".Tips">
+
+    <ImageButton
+        android:id="@+id/backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/iconback"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-condensed-light"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="TIPS"
+        android:textColor="#ffc299"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/orange"
+        android:elevation="1dp"
+        app:layout_collapseMode="pin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <!--Did you Know-->
+            <View
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/cardview" />
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/view3"
+                android:layout_alignTop="@+id/view3"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="65dp"
+                android:background="@drawable/icons_information" />
+            <TextView
+                android:id="@+id/Didyouknow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/view3"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/icon1"
+                android:text="Did you know?"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+
+            <!--Ensure good image quality-->
+            <TextView
+                android:id="@+id/Didyouknow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Didyouknow"
+                android:layout_alignStart="@+id/Didyouknow"
+                android:layout_alignEnd="@+id/Didyouknow"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="-143dp"
+                android:text="You can get the most helpful \ninformation and tips when using the \n\u0022Tips\u0022 button shown just below \neach scanning result."
+                android:textColor="@color/black" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="950dp"
+                android:layout_below="@+id/view3"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/cardview" />
+
+            <TextView
+                android:id="@+id/Goodimagequality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/view"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/icon2"
+                android:text="Ensure good image quality?"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/two"
+                android:layout_width="70dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/Goodimagequality"
+                android:layout_alignStart="@+id/Goodimagequality"
+                android:layout_alignEnd="@+id/view"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_1"
+                android:background="#000000"
+                android:padding="1dp"/>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/two"
+                android:layout_alignStart="@+id/two"
+                android:layout_alignEnd="@+id/two"
+                android:layout_marginTop="10dp"
+                android:text="Ensure the dog's face is the subject of the picture, and make sure the picture is taken from a front view."
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/Two_one"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/text1"
+                android:layout_alignStart="@+id/text1"
+                android:layout_alignEnd="@+id/text1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_2"
+                android:background="#000000"
+                android:padding="1dp" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Two_one"
+                android:layout_alignStart="@+id/Two_one"
+                android:layout_alignEnd="@+id/Two_one"
+                android:layout_marginTop="10dp"
+                android:text="Ensure good lighting for high contrast. If you can’t see what you’re looking for, the app can’t either."
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/three_one"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/text2"
+                android:layout_alignStart="@+id/text2"
+                android:layout_alignEnd="@+id/text2"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_3"
+                android:background="#000000"
+                android:padding="1dp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/three_one"
+                android:layout_alignStart="@+id/three_one"
+                android:layout_alignEnd="@+id/three_one"
+                android:layout_marginTop="10dp"
+                android:text="It should’t get too blurry either"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/four_one"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/text3"
+                android:layout_alignStart="@+id/text3"
+                android:layout_alignEnd="@+id/text3"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_4"
+                android:background="#000000"
+                android:padding="1dp" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/four_one"
+                android:layout_alignStart="@+id/four_one"
+                android:layout_alignEnd="@+id/four_one"
+                android:layout_marginTop="10dp"
+                android:text="The image orientation should be a portrait."
+                android:textColor="@color/black" />
+
+
+
+            <ImageView
+                android:id="@+id/five_one"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/text4"
+                android:layout_alignStart="@+id/text4"
+                android:layout_alignEnd="@+id/text4"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_5"
+                android:background="#000000"
+                android:padding="1dp" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/five_one"
+                android:layout_alignStart="@+id/five_one"
+                android:layout_alignEnd="@+id/five_one"
+                android:layout_marginTop="10dp"
+                android:text="The image shouldn’t include any artifacts."
+                android:textColor="@color/black" />
+
+            <!--Another help -->
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/view"
+                android:layout_alignTop="@+id/view"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="475dp"
+                android:background="@drawable/baseline_photo_camera_24" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_below="@+id/view"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/cardview" />
+            <ImageView
+                android:id="@+id/icon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/view2"
+                android:layout_alignTop="@+id/view2"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/baseline_refresh_24" />
+            <TextView
+                android:id="@+id/anotherhelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/view2"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@+id/icon3"
+                android:text="Another try may help to"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/anotherhelptext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/anotherhelp"
+                android:layout_alignStart="@+id/anotherhelp"
+                android:layout_alignEnd="@+id/view2"
+                android:layout_marginStart="-1dp"
+                android:layout_marginEnd="11dp"
+                android:text="increase the confindence. Classification is only as good as the image that was scanned.If you repeat the scan
+with different images of the same dog and the results keep being the same, it's highly likely that the
+results are correct"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
